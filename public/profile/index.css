@@ -1,0 +1,10 @@
+.wd-song-image {
+  height: 100px;
+  width: 100px;
+}
+
+
+.card-body {
+  float: left;
+  display: inline;
+}
