@@ -15,8 +15,6 @@ export const Song = () => {
                 <span class="badge bg-primary rounded-pill">1</span>
             </li>
         </ul>
-
-
     )
 
 }
