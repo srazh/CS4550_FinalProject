@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 const HeaderComponent = () => {
   return(
       <>
@@ -8,9 +9,7 @@ const HeaderComponent = () => {
                 <div className="col-2">
                   <ul className="navbar-nav">
                     <li className="nav-item">
-                      <a className="nav-link active" href="#">Home/logo?
-                        <span className="visually-hidden">(current)</span>
-                      </a>
+                      <Link to="/" className="nav-link">Home</Link>
                     </li>
                   </ul>
                 </div>
@@ -23,7 +22,7 @@ const HeaderComponent = () => {
                 <div className="col-2">
                   <ul className="navbar-nav float-end">
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Profile</a>
+                      <Link to="profile" className="nav-link">Profile</Link>
                     </li>
                   </ul>
                 </div>
