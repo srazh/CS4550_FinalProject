@@ -1,4 +1,4 @@
-import Song from '../song/song.js'
+import Song from '../song/Song.js'
 export const Profile = () => {
 
     return (
