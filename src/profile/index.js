@@ -1,5 +1,7 @@
 import Song from '../song/song.js'
 import Sarah from '../images/sarah.jpg'
+
+
 export const Profile = () => {
 
     return (
@@ -11,7 +13,6 @@ export const Profile = () => {
             </div>
             <div class="wd-username-section">
             <p>@srazh</p>
-
 
     
             </div>
