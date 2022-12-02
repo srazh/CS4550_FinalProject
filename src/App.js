@@ -4,16 +4,20 @@ import 'bootswatch/dist/quartz/bootstrap.min.css';
 import {BrowserRouter} from "react-router-dom";
 import {Route, Routes} from "react-router";
 import Profile from "./profile";
+import Login from "./users/login.js"
 import HeaderComponent from "./header";
 
 function App() {
   return (
       <BrowserRouter>
         <HeaderComponent/>
+
         <Routes>
-          <Route path="/" element={<HomeComponent/>}/>
+        <Route path="/" element={<Login/>}/>
+          <Route path="/home" element={<HomeComponent/>}/>
           <Route path="/profile" element={<Profile/>}/>
         </Routes>
+        
       </BrowserRouter>
   );
 }
