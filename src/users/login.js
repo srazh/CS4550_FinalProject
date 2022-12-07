@@ -1,7 +1,6 @@
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {loginThunk} from "./users-thunk";
-
 import {Navigate, useNavigate} from "react-router";
 
 
@@ -19,7 +18,6 @@ const Login = () => {
 
             }
     }
-
     if (currentUser) {
         return (<Navigate to={'/profile'}/>)
     }
