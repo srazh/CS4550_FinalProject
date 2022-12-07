@@ -7,7 +7,7 @@ import {logoutThunk} from "./users-thunk";
 
 export const Profile = () => {
     const navigate = useNavigate()
-    const {currentUser} = useSelector((state) => state.users)
+    const currentUser = useSelector((state) => state.users)
     const dispatch = useDispatch()
     const handleLogoutBtn = () => {
         dispatch(logoutThunk())

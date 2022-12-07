@@ -5,6 +5,7 @@ import {BrowserRouter} from "react-router-dom";
 import {Route, Routes} from "react-router";
 import Profile from "./users/profile.js";
 import Login from "./users/login.js"
+import Register from './users/register';
 import HeaderComponent from "./header";
 import {Provider} from "react-redux";
 import {configureStore} from "@reduxjs/toolkit";
@@ -34,8 +35,11 @@ function App() {
                             }/>
           
         <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
           <Route path="/home" element={<HomeComponent/>}/>
-          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/profile" element={
+          
+          <Profile/>}/>
         </Routes>
       </BrowserRouter>
       </Provider>

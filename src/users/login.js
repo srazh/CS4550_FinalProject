@@ -6,7 +6,7 @@ import {Navigate, useNavigate} from "react-router";
 
 
 const Login = () => {
-    const {currentUser} = useSelector((state) => state.users)
+    const currentUser = useSelector((state) => state.users)
     const [username, setUsername] = useState('emma')
     const [password, setPassword] = useState('flyingdophins12345')
     const dispatch = useDispatch()
@@ -24,7 +24,7 @@ const Login = () => {
 
 return (
     <>
-    <h1>Login</h1>
+    <h1>Login to Music Mingles </h1>
     <input
         onChange={(e) => setUsername(e.target.value)}
         placeholder="username"
@@ -37,7 +37,7 @@ return (
         value={password}
         className="form-control" 
     />
-    <button 
+    <button type="button" class="btn btn-success"
     onClick={handleLoginBtn}>
         Login
         </button>
