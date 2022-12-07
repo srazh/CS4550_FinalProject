@@ -17,6 +17,7 @@ export const Song = () => {
             </li>
             <li  class="list-group-item ">
             <img  class="wd-song-image" src={BadFruit} alt="weeknd"/>
+            Bad Fruit
             </li>
             <li class="list-group-item">
             <img class="wd-song-image" src={Forever} alt="weeknd"/>
