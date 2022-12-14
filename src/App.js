@@ -24,6 +24,7 @@ const store = configureStore({
 function App() {
   const spotify = new SpotifyWebApi();
   const [spotifyToken, setSpotifyToken] = useState("");
+  console.log(spotifyToken);
   useEffect(() => {
     console.log("from url: " + getTokenFromURL())
     //spotify token
@@ -38,6 +39,7 @@ function App() {
       spotify.getMe().then(user => console.log(user))
     }
   }, [])
+  console.log(spotifyToken);
   return (
       <Provider store={store}>
       <BrowserRouter>
@@ -51,7 +53,7 @@ function App() {
           
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
-          <Route path="/home" element={<HomeComponent/>}/>
+          <Route path="/" element={<HomeComponent/>}/>
           <Route path="/profile" element={
           
           <Profile/>}/>
