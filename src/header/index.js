@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-const HeaderComponent = () => {
+const HeaderComponent = (token) => {
   return(
       <>
         <nav className="navbar navbar-expand navbar-dark bg-primary d-block">
@@ -16,7 +16,13 @@ const HeaderComponent = () => {
 
 
                     <li className="nav-item">
-                      <Link to="/home" className="nav-link">Home</Link>
+                      {token === "" &&
+                      <a href="http://localhost:8888"
+                         className="nav-link">Login</a>
+                      }
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/" className="nav-link">Home</Link>
                     </li>
                   </ul>
                 </div>

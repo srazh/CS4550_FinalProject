@@ -7,26 +7,41 @@ import Profile from "./users/profile.js";
 import Login from "./users/login.js"
 import Register from './users/register';
 import HeaderComponent from "./header";
-import {Provider} from "react-redux";
+import {getTokenFromURL} from "./spotify/get-token";
+import SpotifyWebApi from "spotify-web-api-js";
+import {useEffect, useState} from "react";
 import {configureStore} from "@reduxjs/toolkit";
+import {Provider} from "react-redux";
+import mingleReducer from './mingle/mingle-reducer';
 import Users from '../src/users/index.js'
 import ProtectedRoute from "react-protected-route-component";
 
-
-
 const store = configureStore({
   reducer: {
-    
-  }
-})
+    mingles: mingleReducer
+  }})
 
 function App() {
-  return (
-    <div>
-    <Provider store={store}>
-      <BrowserRouter>
-        <HeaderComponent/>
+  const spotify = new SpotifyWebApi();
+  const [spotifyToken, setSpotifyToken] = useState("");
+  useEffect(() => {
+    console.log("from url: " + getTokenFromURL())
+    //spotify token
+    const _spotifyToken = getTokenFromURL();
+    // take token out of url
+    window.location.hash = '';
 
+    if (_spotifyToken) {
+      setSpotifyToken(_spotifyToken);
+      spotify.setAccessToken(_spotifyToken);
+
+      spotify.getMe().then(user => console.log(user))
+    }
+  }, [])
+  return (
+      <Provider store={store}>
+      <BrowserRouter>
+        <HeaderComponent token={spotifyToken}/>
         <Routes>
         <Route path="/users" element={
                                 <ProtectedRoute>
@@ -43,7 +58,6 @@ function App() {
         </Routes>
       </BrowserRouter>
       </Provider>
-      </div>
   );
 }
 export default App;

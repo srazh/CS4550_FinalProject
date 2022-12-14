@@ -15,8 +15,12 @@
     "react-redux": "^8.0.5",
     "react-router": "^6.4.3",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
+    "spotify-web-api-js": "^1.5.2",
+=======
     "react-states": "^7.2.0",
     "styled-components": "^5.3.6",
+>>>>>>> c9c29102ad2aa3c792dbc1f310c5c823356f362f
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,6 +48,13 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
+    "@reduxjs/toolkit": "^1.9.1",
+    "axios": "^1.2.1",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3"
+=======
     "react-router-dom": "^6.4.4"
+>>>>>>> c9c29102ad2aa3c792dbc1f310c5c823356f362f
   }
 }
