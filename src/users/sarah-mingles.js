@@ -1,14 +1,12 @@
-import MingleItem from '../mingle/mingleItem'
+import MingleItem from "../mingle/mingleItem";
 
-
-const SarahMingles = () => {   
-return (
+const SarahMingles = () => {
+  return (
     <>
-        <h1>Sarah's Public Mingles</h1>
-        <MingleItem/>
+      <h3 class="wd-top-songs-header">Sarah's Public Mingles</h3>
+      <MingleItem />
     </>
-
-)
-      }
+  );
+};
 
 export default SarahMingles;

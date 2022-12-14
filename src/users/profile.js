@@ -20,7 +20,7 @@ export const Profile = () => {
         <div>
         <div class="wd-user-section">
             <img class="wd-prof-pic" src={Sarah} alt="sarah "/>
-            <h1 class="name">Sarah Zhang</h1>
+            <h1 class="wd-username">Sarah Zhang</h1>
             {
                 currentUser &&
                 <h2>Welcome new user: {currentUser.username}</h2>
@@ -28,6 +28,8 @@ export const Profile = () => {
             </div>
             <div class="wd-username-section">
             <p>@srazh</p>
+
+            <p>80 Followers 30 Following</p>
            
             </div>
             <button 
