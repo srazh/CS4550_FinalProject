@@ -55,7 +55,6 @@ function App() {
         <Route path="/register" element={<Register/>}/>
           <Route path="/" element={<HomeComponent/>}/>
           <Route path="/profile" element={
-          
           <Profile/>}/>
         </Routes>
       </BrowserRouter>
