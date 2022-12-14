@@ -30,12 +30,13 @@ export const Profile = () => {
             <p>@srazh</p>
            
             </div>
-            <h3 class="wd-top-songs-header"> Sarah's Top Songs </h3>
-            <button
+            <button 
                 className="btn btn-danger"
                 onClick={handleLogoutBtn}>
                 Logout
             </button>
+            <h3 class="wd-top-songs-header"> Sarah's Top Songs </h3>
+
         <Song/>
         <SarahMingles/>
         </div>

@@ -1,15 +1,12 @@
 .wd-song-image {
-
     height: 10em;
 }
-
 
 .wd-prof-pic {
     border-radius: 50px;
     height: 5em;
 }
 .wd-user-section {
-    
     padding: 2em;
     display: flex;
 }
@@ -19,10 +16,16 @@
 }
 
 .wd-top-songs-header {
-    padding-left: 2em;
+    padding-left: 1em;
+    
 }
-
 
 .wd-song-title {
     padding-left: 2em;
 }
+
+.btn-danger {
+    margin-left: 2em;
+    margin-bottom: 2em;
+}
+

@@ -1,8 +1,14 @@
-const SarahMingles = () => {
+import MingleItem from '../mingle/mingleItem'
+
+
+const SarahMingles = () => {   
 return (
+    <>
+        <h1>Sarah's Public Mingles</h1>
+        <MingleItem/>
+    </>
 
-    <h1>Sarah's Public Mingles</h1>
 )
+      }
 
-}
 export default SarahMingles;
