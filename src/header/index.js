@@ -8,8 +8,14 @@ const HeaderComponent = (token) => {
               <div className="row flex-fill">
                 <div className="col-2">
                   <ul className="navbar-nav">
+
+                    
+                  <li className="nav-item">
+                      <Link to="/login" className="nav-link">Login</Link>
+                    </li>
+
+
                     <li className="nav-item">
-                      {/*if theres no access token!!!*/}
                       {token === "" &&
                       <a href="http://localhost:8888"
                          className="nav-link">Login</a>

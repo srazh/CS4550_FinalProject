@@ -3,7 +3,9 @@ import HomeComponent from "./home";
 import 'bootswatch/dist/quartz/bootstrap.min.css';
 import {BrowserRouter} from "react-router-dom";
 import {Route, Routes} from "react-router";
-import Profile from "./profile";
+import Profile from "./users/profile.js";
+import Login from "./users/login.js"
+import Register from './users/register';
 import HeaderComponent from "./header";
 import {getTokenFromURL} from "./spotify/get-token";
 import SpotifyWebApi from "spotify-web-api-js";
@@ -11,12 +13,13 @@ import {useEffect, useState} from "react";
 import {configureStore} from "@reduxjs/toolkit";
 import {Provider} from "react-redux";
 import mingleReducer from './mingle/mingle-reducer';
+import Users from '../src/users/index.js'
+import ProtectedRoute from "react-protected-route-component";
 
 const store = configureStore({
   reducer: {
     mingles: mingleReducer
-  }
-})
+  }})
 
 function App() {
   const spotify = new SpotifyWebApi();
@@ -40,12 +43,21 @@ function App() {
       <BrowserRouter>
         <HeaderComponent token={spotifyToken}/>
         <Routes>
-          <Route path="/" element={<HomeComponent/>}/>
-          <Route path="/profile" element={<Profile/>}/>
+        <Route path="/users" element={
+                                <ProtectedRoute>
+                                    <Users/>
+                                </ProtectedRoute>
+                            }/>
+          
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
+          <Route path="/home" element={<HomeComponent/>}/>
+          <Route path="/profile" element={
+          
+          <Profile/>}/>
         </Routes>
       </BrowserRouter>
       </Provider>
   );
 }
-
 export default App;

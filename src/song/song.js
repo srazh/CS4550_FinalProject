@@ -1,22 +1,28 @@
+import Weeknd from '../images/weeknd.png'
+import BadFruit from '../images/badfruit.jpg'
+import Forever from '../images/forever.jpg'
+import "../song/index.css";
+
+
+
+
+
 export const Song = () => {
 
     return (
-        <ul className="list-group">
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-                Cras justo odio
-                <span className="badge bg-primary rounded-pill">14</span>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <img class="wd-song-image"src={Weeknd} alt="weeknd"/>
+                Scared to Live
             </li>
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-                Dapibus ac facilisis in
-                <span className="badge bg-primary rounded-pill">2</span>
+            <li  class="list-group-item ">
+            <img  class="wd-song-image" src={BadFruit} alt="weeknd"/>
             </li>
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-                Morbi leo risus
-                <span className="badge bg-primary rounded-pill">1</span>
+            <li class="list-group-item">
+            <img class="wd-song-image" src={Forever} alt="weeknd"/>
+                Forever
             </li>
         </ul>
-
-
     )
 
 }
