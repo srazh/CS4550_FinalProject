@@ -34,3 +34,19 @@
     padding-left: 0.2em;
     padding-top: 0.3em;
 }
+
+
+.wd-mingle-row {
+    display: inline;
+}
+
+.card  {
+    display: inline-block;
+    height: 350px;
+    width: 350px;
+    margin-left: 2em;
+}
+
+.wd-mingle-image {
+    height: 350px;
+}

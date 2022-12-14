@@ -4,7 +4,7 @@ import Sarah from "../images/sarah.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { logoutThunk } from "./users-thunk";
-import SarahMingles from "./emma-mingles";
+import EmmaMingles from "./emma-mingles";
 
 export const Profile = () => {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ export const Profile = () => {
         <h3 class="wd-top-songs-header"> Emma's Top Songs </h3>
 
         <Song />
-        <SarahMingles />
+        <EmmaMingles />
       </div>
     </div>
   );
