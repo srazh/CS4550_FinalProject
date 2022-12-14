@@ -8,6 +8,15 @@ import HeaderComponent from "./header";
 import {getTokenFromURL} from "./spotify/get-token";
 import SpotifyWebApi from "spotify-web-api-js";
 import {useEffect, useState} from "react";
+import {configureStore} from "@reduxjs/toolkit";
+import {Provider} from "react-redux";
+import mingleReducer from './mingle/mingle-reducer';
+
+const store = configureStore({
+  reducer: {
+    mingles: mingleReducer
+  }
+})
 
 function App() {
   const spotify = new SpotifyWebApi();
@@ -27,6 +36,7 @@ function App() {
     }
   }, [])
   return (
+      <Provider store={store}>
       <BrowserRouter>
         <HeaderComponent token={spotifyToken}/>
         <Routes>
@@ -34,6 +44,7 @@ function App() {
           <Route path="/profile" element={<Profile/>}/>
         </Routes>
       </BrowserRouter>
+      </Provider>
   );
 }
 

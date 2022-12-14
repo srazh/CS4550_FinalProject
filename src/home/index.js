@@ -1,4 +1,4 @@
-import MingleComponent from "../mingleCard";
+import MingleComponent from "../mingle";
 
 const HomeComponent = () => {
   return(

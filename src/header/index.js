@@ -10,10 +10,10 @@ const HeaderComponent = (token) => {
                   <ul className="navbar-nav">
                     <li className="nav-item">
                       {/*if theres no access token!!!*/}
-                      {/*{token === "" &&*/}
+                      {token === "" &&
                       <a href="http://localhost:8888"
                          className="nav-link">Login</a>
-                      // }
+                      }
                     </li>
                     <li className="nav-item">
                       <Link to="/" className="nav-link">Home</Link>
