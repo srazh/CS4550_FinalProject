@@ -3,6 +3,7 @@ import Sarah from '../images/sarah.jpg'
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router";
 import {logoutThunk} from "./users-thunk";
+import SarahMingles from "./sarah-mingles";
 
 
 export const Profile = () => {
@@ -36,6 +37,7 @@ export const Profile = () => {
                 Logout
             </button>
         <Song/>
+        <SarahMingles/>
         </div>
         </>
     )

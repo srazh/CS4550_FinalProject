@@ -1,4 +1,3 @@
-import { curryGetDefaultMiddleware } from "@reduxjs/toolkit/dist/getDefaultMiddleware";
 
 const SongCard = () => {
     return (
