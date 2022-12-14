@@ -3,7 +3,7 @@ import Sarah from '../images/sarah.jpg'
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router";
 import {logoutThunk} from "./users-thunk";
-import SarahMingles from "./sarah-mingles";
+import SarahMingles from "./emma-mingles";
 
 
 export const Profile = () => {
@@ -20,14 +20,14 @@ export const Profile = () => {
         <div>
         <div class="wd-user-section">
             <img class="wd-prof-pic" src={Sarah} alt="sarah "/>
-            <h1 class="wd-username">Sarah Zhang</h1>
+            <h1 class="wd-username">Emma Bell</h1>
             {
                 currentUser &&
                 <h2>Welcome new user: {currentUser.username}</h2>
             }
             </div>
             <div class="wd-username-section">
-            <p>@srazh</p>
+            <p>@bellemma</p>
 
             <p>80 Followers 30 Following</p>
            
@@ -37,7 +37,7 @@ export const Profile = () => {
                 onClick={handleLogoutBtn}>
                 Logout
             </button>
-            <h3 class="wd-top-songs-header"> Sarah's Top Songs </h3>
+            <h3 class="wd-top-songs-header"> Emma's Top Songs </h3>
 
         <Song/>
         <SarahMingles/>
